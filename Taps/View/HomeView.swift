@@ -12,7 +12,6 @@ struct HomeView: View {
     @StateObject var settingViewModel = SettingViewModel()
     @StateObject var recordViewModel = RecordViewModel()
     @StateObject var tapsGame = TapsGameViewModel()
-    @StateObject var tabBarModel = DifficultyTabBarModel()
     
     @StateObject var difficultyViewModel = DifficultyViewModel()
     

@@ -59,16 +59,16 @@ class TapsGameViewModel: ObservableObject{
     }
     
     func addObjectOffset(){
-        let score = getRandomGeomtryValue()
+        let score = getRandomGeometryValue()
         var penaltyObject1Offset: CGSize
         repeat{
-            penaltyObject1Offset = getRandomGeomtryValue()
+            penaltyObject1Offset = getRandomGeometryValue()
         }while(!checkNotOverlapped(offsetA: score, offsetB: penaltyObject1Offset, frameWidth: objectWidth))
         let penalty1 = penaltyObject1Offset
         
         var penaltyObject2Offset: CGSize
         repeat{
-            penaltyObject2Offset = getRandomGeomtryValue()
+            penaltyObject2Offset = getRandomGeometryValue()
         }while(!checkNotOverlapped(offsetA: score, offsetB: penaltyObject1Offset, offsetC: penaltyObject2Offset, frameWidth: objectWidth))
         let penalty2 = penaltyObject2Offset
         objectOffsets.append((score,penalty1,penalty2))
@@ -102,9 +102,9 @@ class TapsGameViewModel: ObservableObject{
         }
     }
     
-    func getRandomGeomtryValue()->CGSize{
+    func getRandomGeometryValue()->CGSize{
         guard let width = geometryValue?.width, let height = geometryValue?.height else {return CGSize.zero}
-        let timeLeftProgressViewHeight = 30
+        let timeLeftProgressViewHeight = 40
         let headerViewHeight = 120
         let randWidth = Int.random(in: 0...Int(width)-Int(objectWidth))
         let randHeight = Int.random(in: headerViewHeight...Int(height)-Int(objectHeight)-timeLeftProgressViewHeight)

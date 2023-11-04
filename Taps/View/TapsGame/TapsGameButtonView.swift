@@ -20,7 +20,7 @@ struct TapsGameButtonView: View {
             .foregroundColor(getTapButtonColor())
             .overlay {
                 if tapsGameObject.overlayX {
-                    Image("xmark")
+                    Image("cross")
                         .renderingMode(.template)
                         .resizable()
                         .foregroundColor(themeObject.currentTheme.colorSet.stroke)
